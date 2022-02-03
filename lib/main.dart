@@ -24,6 +24,8 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController _UserController = TextEditingController();
+
     String Bussiness_Name = "Aman";
     String Bussiness_Rating = "";
     String Bussiness_review = "";
@@ -249,7 +251,69 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           back: Container(
-            child: Text('Back'),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Column(
+                  children: [
+                    Image.asset(
+                      "assets/images/logo.png",
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            controller: _UserController,
+                            cursorColor: Colors.black,
+                            minLines: 1,
+                            maxLines: 5,
+                            keyboardType: TextInputType.multiline,
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Enter the massage",
+                                hintStyle: TextStyle(color: Colors.grey)),
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.purple),
+                            borderRadius: BorderRadius.circular(20)),
+                        height: 130,
+                        width: double.infinity,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15.0),
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  primary: Colors.purple),
+                              onPressed: () {
+                                print(_UserController);
+                              },
+                              child: Text("SUBMIT")),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                height: 250,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.purple[50],
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.purple,
+                          blurRadius: 10.0,
+                          offset: Offset(0, 10))
+                    ]),
+              ),
+            ),
           ),
         ),
       ),
