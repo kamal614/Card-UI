@@ -30,7 +30,6 @@ class MyHomePage extends StatelessWidget {
     String Contact_number = "";
 
     return Scaffold(
-      // backgroundColor: Colors.pink[200],
       body: Center(
         child: FlipCard(
           front: Padding(
@@ -47,7 +46,6 @@ class MyHomePage extends StatelessWidget {
                   Container(
                     child: Column(
                       children: [
-                        // Text("aca"),
                         Image.asset(
                           "assets/images/logo.png",
                           height: 50,
@@ -74,9 +72,6 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.black,
                           height: 40,
                         ),
-                        // SizedBox(
-                        //   height: 20,
-                        // ),
                         Padding(
                           padding: const EdgeInsets.only(top: 15.0, left: 30),
                           child: Row(
@@ -105,7 +100,6 @@ class MyHomePage extends StatelessWidget {
                                   child: Container(
                                     width: 20,
                                     decoration: BoxDecoration(
-                                        // color: Colors.red,
                                         gradient: LinearGradient(
                                             begin: Alignment.bottomLeft,
                                             end: Alignment.bottomRight,
@@ -239,8 +233,6 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.purple[700],
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(130),
-                              // bottomLeft: Radius.circular(100),
-                              // bottomRight: Radius.circular(100),
                               topRight: Radius.circular(130))),
                     ),
                   )
