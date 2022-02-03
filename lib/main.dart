@@ -230,6 +230,12 @@ class MyHomePage extends StatelessWidget {
                       width: 90,
                       height: 80,
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            new BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 5.0,
+                            ),
+                          ],
                           color: Colors.purple[700],
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(130),
