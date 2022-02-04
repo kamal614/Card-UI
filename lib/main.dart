@@ -37,12 +37,12 @@ class MyHomePage extends StatelessWidget {
           front: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                    color: Colors.purple,
-                    blurRadius: 25.0,
-                    offset: Offset(0, 10))
-              ]),
+              // decoration: BoxDecoration(boxShadow: [
+              //   BoxShadow(
+              //       color: Colors.purple,
+              //       blurRadius: 5.0,
+              //       offset: Offset(5, 10))
+              // ]),
               child: Stack(
                 children: [
                   Container(
@@ -265,7 +265,7 @@ class MyHomePage extends StatelessWidget {
                             keyboardType: TextInputType.multiline,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "Enter the massage",
+                                hintText: "Enter the message",
                                 hintStyle: TextStyle(color: Colors.grey)),
                           ),
                         ),
